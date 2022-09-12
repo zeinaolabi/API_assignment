@@ -52,3 +52,63 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+input{
+    margin: 2vh 0;
+    padding: 1vh 1vw;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 18px;
+    outline: transparent;
+}
+
+button{
+    padding: 1.5vh 1.5vw;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+}
+
+.purple{
+    background-color: rgb(152, 8, 152);
+    color: white;
+}
+
+.purple:hover{
+    background-color: white;
+    color: rgb(152, 8, 152);
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.red:hover{
+    background-color: white;
+    color: red;
+}
+
+.green{
+    background-color:rgb(21, 82, 21);
+    color: white;
+}
+
+.green:hover{
+    background-color:white;
+    color: rgb(21, 82, 21);
+}
+
+.blue{
+    background-color: rgb(48, 102, 165);
+    color: white;
+}
+
+.blue:hover{
+    background-color: white;
+    color: rgb(48, 102, 165);
+}
+
+h2{
+    margin-top: 1vh;
+}
