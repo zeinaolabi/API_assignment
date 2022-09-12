@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game time!</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div class="main_container">
@@ -12,28 +13,46 @@
             <h1>Feeling Christmasy?<br/>
                 Find out how many days are left for christmas!</h1>
 
+            <input type="number" placeholder="day">
+            <input type="number" placeholder="month">
+            <input type="number" placeholder="year">
+
             <button id="christmasButton" class="red">Click here!</button>
+            <h2 id="christmas_result"></h2>
         </div>
 
         <div class="game math">
             <h1>What's more fun than<br/>
                 a challenging math equation!</h1>
 
+            <h2>Solve the equation: a^3 + b*c - a/b</h2>
+
+            <input type="number" placeholder="a">
+            <input type="number" placeholder="b">
+            <input type="number" placeholder="c">
+
             <button id="mathButton" class="blue">Click here!</button>
+            <h2 id="math_result"></h2>
         </div>
 
         <div class="game palindrome">
             <h1>To palindrome or not to palindrome?<br/>
                 Find out!</h1>
 
+            <input type="text" placeholder="Enter a text">
+
             <button id="palindromeButton" class="green">Click here!</button>
+            <h2 id="palindrome_result"></h2>
         </div>
 
         <div class="game password">
             <h1>Feeling insecure?<br/>
                 Test your password right now!</h1>
 
+            <input type="text" placeholder="Enter a text">
+
             <button id="passwordButton" class="purple">Click here!</button>
+            <h2 id="password_result"></h2>
         </div>
     </div> 
 </body>
