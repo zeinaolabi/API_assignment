@@ -1,6 +1,12 @@
 <?php
 $password = $_POST['password'];
 
+$results = [
+    "password" => $password,
+    "status" => validatePassword($password)
+];
+
+echo json_encode($results);
 
 function validatePassword($password){
     $checkNum = preg_match('@[0-9]@', $password);
@@ -9,9 +15,9 @@ function validatePassword($password){
     $checkSpeicalChar = preg_match('@[^\w]@', $password);
  
     if(strlen($password) < 12 || !$checkNum || !$checkUppercase || !$checkLowercase || !$checkSpeicalChar) {
-        echo "Weak";
+        return "Weak";
     }else{
-        echo "Strong";
+        return "Strong";
     }
 }
 ?>
