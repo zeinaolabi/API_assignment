@@ -13,6 +13,6 @@ $results = [
 echo json_encode($results);
 
 function getSolution($a, $b, $c){
-    return  pow($a,3) + $b * $c - $a / $b;
+    return  pow($a,3) + ($b * $c) - ($a / $b);
 }
 ?>
