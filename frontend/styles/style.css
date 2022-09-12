@@ -112,3 +112,14 @@ button{
 h2{
     margin-top: 1vh;
 }
+
+@media screen and (max-width: 1200px) {
+    .main_container{
+        flex-direction: column;
+    }
+
+    .game{
+        width: 100vw;
+        height: 50vh;
+    }
+}
