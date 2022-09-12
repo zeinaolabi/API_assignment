@@ -1,4 +1,13 @@
 <?php
+$text = $_GET["string"];
+
+$results = [
+    "string" => $text,
+    "palindrome" => Palindrome($text)
+];
+
+echo json_encode($results);
+
 function Palindrome($string) {
     $first = 0;
     $second = strlen($string) - 1;
