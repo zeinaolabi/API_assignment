@@ -18,32 +18,32 @@ let mathButton = document.getElementById("math_button");
 //When the password button is clicked, show result
 passwordButton.addEventListener("click", (event)=>{
     //Fetch data from API using axios
-    const headers = { "password": password.value.trim() };
-    axios.post(passwordAPI, {headers})
+    let passHeaders = { "password": password.value.trim() };
+    axios.post(passwordAPI, {passHeaders})
     .then(response => document.getElementById("password_result") = response.data.status);
 })
 
 //When the palindrome button is clicked, show result
 palindromeButton.addEventListener("click", (event)=>{
     //Fetch data from API using axios
-    const headers = { "string": palindrome.value.trim() };
-    axios.post(palindromeAPI, {headers})
+    let palHeaders = { "string": palindrome.value.trim() };
+    axios.post(palindromeAPI, {palHeaders})
     .then(response => document.getElementById("palindrome_result") = response.data.palindrome);
 })
 
 //When the chrsitmas button is clicked, show result
 christmasButton.addEventListener("click", (event)=>{
     //Fetch data from API using axios
-    const headers = { "day": day.value.trim(), "month": month.value.trim()};
-    axios.post(christmasAPI, {headers})
+    let christmansHeaders = { "day": day.value.trim(), "month": month.value.trim()};
+    axios.post(christmasAPI, {christmansHeaders})
     .then(response => document.getElementById("christmas_result") = response.data.daysLeft);
 })
 
 //When the math button is clicked, show result
 mathButton.addEventListener("click", (event)=>{
     //Fetch data from API using axios
-    const headers = { "a": a.value, "b": b.value, "c": c.value };
-    axios.post(mathFormulaAPI, {headers})
+    let mathHeaders = { "a": a.value, "b": b.value, "c": c.value };
+    axios.post(mathFormulaAPI, {mathHeaders})
     .then(response => document.getElementById("math_result") = response.data.result);
 })
 
