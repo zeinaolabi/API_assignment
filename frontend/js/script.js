@@ -5,7 +5,6 @@ let palindromeAPI = "http://localhost/API_assignment/palindromeAPI.php?string="
 let passwordAPI = "http://localhost/API_assignment/strongPasswordAPI.php"
 let day = document.getElementById("day");
 let month = document.getElementById("month");
-let year = document.getElementById("year");
 let a = document.getElementById("a");
 let b = document.getElementById("b");
 let c = document.getElementById("c");
@@ -18,14 +17,34 @@ let mathButton = document.getElementById("math_button");
 
 //When the password button is clicked, show result
 passwordButton.addEventListener("click", (event)=>{
-fetch(passwordAPI, {
-    method: "POST",
-    body: JSON.stringify({
-        password: "foo",
-    })
+    //Fetch data from API using axios
+    const headers = { "password": password.value.trim() };
+    axios.post(passwordAPI, {headers})
+    .then(response => document.getElementById("password_result") = response.data.status);
 })
-.then(response => response.json())
-.then(json => console.log(json));
+
+//When the palindrome button is clicked, show result
+palindromeButton.addEventListener("click", (event)=>{
+    //Fetch data from API using axios
+    const headers = { "string": palindrome.value.trim() };
+    axios.post(palindromeAPI, {headers})
+    .then(response => document.getElementById("palindrome_result") = response.data.palindrome);
+})
+
+//When the chrsitmas button is clicked, show result
+christmasButton.addEventListener("click", (event)=>{
+    //Fetch data from API using axios
+    const headers = { "day": day.value.trim(), "month": month.value.trim()};
+    axios.post(christmasAPI, {headers})
+    .then(response => document.getElementById("christmas_result") = response.data.daysLeft);
+})
+
+//When the math button is clicked, show result
+mathButton.addEventListener("click", (event)=>{
+    //Fetch data from API using axios
+    const headers = { "a": a.value, "b": b.value, "c": c.value };
+    axios.post(mathFormulaAPI, {headers})
+    .then(response => document.getElementById("math_result") = response.data.result);
 })
 
 

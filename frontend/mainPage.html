@@ -13,9 +13,8 @@
             <h1>Feeling Christmasy?<br/>
                 Find out how many days are left for christmas!</h1>
 
-            <input type="number" placeholder="day">
-            <input type="number" placeholder="month">
-            <input type="number" placeholder="year">
+            <input id="day" type="number" placeholder="day">
+            <input id="month" type="number" placeholder="month">
 
             <button id="christmas_button" class="red">Click here!</button>
             <h2 id="christmas_result"></h2>
@@ -27,9 +26,9 @@
 
             <h2>Solve the equation: a^3 + b*c - a/b</h2>
 
-            <input type="number" placeholder="a">
-            <input type="number" placeholder="b">
-            <input type="number" placeholder="c">
+            <input id="a" type="number" placeholder="a">
+            <input id="b" type="number" placeholder="b">
+            <input id="c" type="number" placeholder="c">
 
             <button id="math_button" class="blue">Click here!</button>
             <h2 id="math_result"></h2>
@@ -39,7 +38,7 @@
             <h1>To palindrome or not to palindrome?<br/>
                 Find out!</h1>
 
-            <input type="text" placeholder="Enter a text">
+            <input id="palindrome" type="text" placeholder="Enter a text">
 
             <button id="palindrome_button" class="green">Click here!</button>
             <h2 id="palindrome_result"></h2>
@@ -49,7 +48,7 @@
             <h1>Feeling insecure?<br/>
                 Test your password right now!</h1>
 
-            <input type="text" placeholder="Enter a text">
+            <input id="password" type="text" placeholder="Enter a text">
 
             <button id="password_button" class="purple">Click here!</button>
             <h2 id="password_result"></h2>
@@ -57,5 +56,6 @@
     </div> 
 
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>
