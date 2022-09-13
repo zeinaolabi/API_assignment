@@ -1,14 +1,15 @@
 <?php
+//Getting day, month and year
 $day = $_GET["day"];
 $month = $_GET["month"];
-$year = $_GET["year"];
 
-if(!is_numeric($day) || !is_numeric($month) || !is_numeric($year)){
+//Checking if input is a number
+if(!is_numeric($day) || !is_numeric($month)){
     throw new Exception("Numbers only");
 }
 
-$date = date($year.'-'.$month.'-'.$day);
-$christmas = strtotime('December 25');
+//Getting the date
+$date = date('Y-'.$month.'-'.$day);
 
 $results = [
     "currentDate" => $date,
@@ -19,8 +20,10 @@ $results = [
 echo json_encode($results);
 
 function getDaysLeft($date){
+    //Getting christmas date
     $christmas = date('Y-12-25');
 
-    return round((strtotime($christmas) - strtotime($date)) / 86400);
+    //Calculating the difference between christmas and current date after converting them to time(seconds)
+    return(round((strtotime($christmas) - strtotime($date)) / 86400));
 }
 ?>
